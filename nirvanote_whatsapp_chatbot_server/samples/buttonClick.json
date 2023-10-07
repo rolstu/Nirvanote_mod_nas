@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    { "profile": { "name": "Sandeep Kumar" }, "wa_id": "919482466762" }
+  ],
+  "messages": [
+    {
+      "button": { "text": "Start" },
+      "context": {
+        "from": "919632413497",
+        "id": "gBEGkZSCRmdiAglTSozD3-IrlgI"
+      },
+      "from": "919482466762",
+      "id": "ABEGkZSCRmdiAgo60YhKy_g7IiPv",
+      "timestamp": "1667578692",
+      "type": "button"
+    }
+  ]
+}
