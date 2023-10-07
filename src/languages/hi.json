@@ -1,0 +1,141 @@
+{
+  "whatsapp_language_code": "hi",
+  "version": 1,
+  "language_policy": "deterministic",
+  "language_name": "Hindi",
+  "language_messages": {
+    "SECURITY_POLICY_MESSAGE": {
+      "whatsapp_template_id": "security_policy_message_hi",
+      "msg": "Welcome to Nirvanote! Please click on below link to view security policy {{1}}",
+      "answers": [
+        { "answer": "स्वीकार करना |", "nextState": "WELCOME_MESSAGE" },
+        { "answer": "अस्वीकार करना |", "nextState": "THANK_YOU_MESSAGE" }
+      ],
+      "components": [
+        {
+          "type": "body",
+          "parameters": [
+            {
+              "type": "text",
+              "text": "https://www.whatsapp.com/legal/privacy-policy-eea"
+            }
+          ]
+        }
+      ]
+    },
+    "WELCOME_MESSAGE": {
+      "whatsapp_template_id": "welcome_message_hi",
+      "msg": "Welcome to Nirvanote! Please view the training video from the link below. {{1}}",
+      "answers": [
+        { "answer": "मैं तैयार हूँ।", "nextState": "QUESTION1_MESSAGE" }
+      ],
+      "components": [
+        {
+          "type": "body",
+          "parameters": [
+            {
+              "type": "text",
+              "text": "https://youtu.be/-bfmxFcv8yw"
+            }
+          ]
+        }
+      ]
+    },
+    "QUESTION1_MESSAGE": {
+      "whatsapp_template_id": "question1_message_hi",
+      "msg": "Do you hear any human speaking in this video ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION2_MESSAGE" },
+        { "answer": "नहीं", "nextState": "THANK_YOU_MESSAGE" }
+      ],
+      "components": [
+        {
+          "type": "header",
+          "parameters": [
+            {
+              "type": "video",
+              "video": {
+                "id": "{{{VIDEO}}}"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "QUESTION2_MESSAGE": {
+      "whatsapp_template_id": "question2_message_hi",
+      "msg": "Are you able to understand what you hear ?",
+      "answers": [
+        { "answer": "हाँ|", "nextState": "QUESTION3_MESSAGE" },
+        { "answer": "नहीं|", "nextState": "THANK_YOU_MESSAGE" }
+      ]
+    },
+    "QUESTION3_MESSAGE": {
+      "whatsapp_template_id": "question3_message_hi",
+      "msg": "Does it sound like somebody from {{1}} ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION4_MESSAGE" },
+        { "answer": "नहीं", "nextState": "QUESTION4_MESSAGE" }
+      ],
+      "components": [
+        {
+          "type": "body",
+          "parameters": [{ "type": "text", "text": "{{{LOCATION}}}" }]
+        }
+      ]
+    },
+    "QUESTION4_MESSAGE": {
+      "whatsapp_template_id": "question4_message_hi",
+      "msg": "Is the audio clear and without any distrubance ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION5_MESSAGE" },
+        { "answer": "नहीं", "nextState": "QUESTION5_MESSAGE" }
+      ]
+    },
+    "QUESTION5_MESSAGE": {
+      "whatsapp_template_id": "question5_message_hi",
+      "msg": "Do you hear only one person speaking ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION6_MESSAGE" },
+        { "answer": "नहीं", "nextState": "QUESTION6_MESSAGE" }
+      ]
+    },
+    "QUESTION6_MESSAGE": {
+      "whatsapp_template_id": "question6_message_hi",
+      "msg": "Does the audio sound like a complete sentence ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION7_MESSAGE" },
+        { "answer": "नहीं", "nextState": "QUESTION7_MESSAGE" }
+      ]
+    },
+    "QUESTION7_MESSAGE": {
+      "whatsapp_template_id": "question7_message_hi",
+      "msg": "Does the audio talk about the image ?",
+      "answers": [
+        { "answer": "हाँ", "nextState": "QUESTION8_MESSAGE" },
+        { "answer": "नहीं", "nextState": "QUESTION8_MESSAGE" }
+      ]
+    },
+    "QUESTION8_MESSAGE": {
+      "whatsapp_template_id": "question8_message_hi",
+      "msg": "Do you recognize this person is Male, Female or Junior ?",
+      "answers": [
+        { "answer": "पुरुष", "nextState": "THANK_YOU_MESSAGE" },
+        { "answer": "महिला", "nextState": "THANK_YOU_MESSAGE" },
+        { "answer": "कनिष्ठ", "nextState": "THANK_YOU_MESSAGE" }
+      ]
+    },
+    "THANK_YOU_MESSAGE": {
+      "whatsapp_template_id": "thank_you_message_hi",
+      "msg": "Thank you for your time. Have a nice day!"
+    },
+    "INVALID_OPTION_MESSAGE": {
+      "whatsapp_template_id": "invalid_option_message_hi",
+      "msg": "That Option is invalid. Please select the correct option."
+    },
+    "NO_TASKS_AVAILABLE": {
+      "whatsapp_template_id": "no_tasks_available_en",
+      "msg": "No more audio clips assigned to you. Thank you for your time. Have a nice day !"
+    }
+  }
+}

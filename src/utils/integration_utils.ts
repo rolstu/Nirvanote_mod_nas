@@ -1,0 +1,9 @@
+export const threeQuestionAPI = process.env.THREE_QUESTION_API
+export const fiveQuestionAPI = process.env.FIVE_QUESTION_API
+export const threeQuestionFileIngestionAPI = process.env.THREE_QUESTION_FILE_INGESTION_API
+export const fiveQuestionFileIngestionAPI = process.env.FIVE_QUESTION_FILE_INGESTION_API
+export const threeQuestionSecret = process.env.THREE_QUESTION_SECRET
+export const fiveQuestionSecret = process.env.FIVE_QUESTION_SECRET
+export const threeQuestionUUID = process.env.THREE_QUESTION_UUID
+export const fiveQuestionUUID = process.env.FIVE_QUESTION_UUID
+export const sheetId = process.env.SHEET_ID
